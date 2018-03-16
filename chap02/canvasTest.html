@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas 연습</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="600" height="400">
+        이 브라우저는 canvas를 지원하지 않습니다.
+    </canvas>
+    <script>
+    //이벤트
+    window.onload = init;
+    function init(){
+        mycanvas = document.getElementById("mycanvas");
+        ctx = mycanvas.getContext("2d");
+        ctx.fillStyle = "red";
+        ctx.fillRect(10,10,200,300); //x좌표, y좌표, 가로, 세로 순으로 지정
+        ctx.fillStyle = "blue";
+        ctx.fillRect(150,120,100,100);
+        ctx.fillStyle = "yellow";
+        ctx.beginPath();
+        ctx.arc(300,300,70,0,2*Math.PI,true);
+        ctx.closePath();
+        ctx.fill();
+    }
+    </script>
+</body>
+</html>
