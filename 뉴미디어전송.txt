@@ -185,3 +185,46 @@ euc-kr은 완성형 코드로 메모리를 적게 사용하는 한글과 영문�
 <caption> 테이블의 제목
 
 <table>의 속성에는 bgcolor, align, cellspacing 등과 같은 것들이 있다. 그러나 이는 모두 html5에서 사용이 금지되었고, css를 사용하도록 한다.
+
+<audio>
+- 음악을 재생하는 태그
+(Autoplay - 음악 자동 재생, Controls - 제어기 표시, Loop - 반복재생, Preload - 오디오 미리 다운로드 -> 빠른 재생 가능, Src - 오디오 경로 지정, Volume - 재생 볼륨 설정(0~1))
+
+<audio 지원 파일>
+- mp3, wav, ogg 등
+
+<source>
+- 호환성을 위해 원본 파일의 형식을 지정한다.
+
+<video>
+- 음악을 재생하는 태그
+(Autoplay - 비디오 자동 재생, Controls - 제어기 표시, Loop - 반복재생, Preload - 오디오 미리 다운로드 -> 빠른 재생 가능, Poster - 비디오를 다운로드 중일때 표시하는 이미지, Src - 오디오 경로 지정, Muted - 비디오의 오디오 출력을 중지, Width,Height -  비디오의 크기를 지정)
+
+<video 지원 파일>
+- mp4, vebm(구글), ogg(테오라) 등
+
+<source>
+- 호환성을 위해 원본 파일의 형식을 지정한다.
+
+<ifrane>
+- 웹페이지 안에서 다른 페이지를 표시하고자 할 때 사용
+- Frameborder, scrolling, margin 등의 속성이 html4.0 버전까지 지원되었으나 html5에서는 더 이상 지원되지 않는다.
+- 새로 추가된 속성에는 seamless(브라우저에 따라 지원여부 확인)가 있다.
+- 광고를 위해 사용
+- 익스플로러에서 사적으로 사용하던 기술
+
+<div>
+- 논리적인 섹션을 나누는 태그
+
+<span>
+- 인라인(태그 내의) 요소로서 텍스트를 위한 컨테이너
+
+<form ...action ...method...>
+- 화면에 나타나지는 않으나 입력요소를 화면에 담는 컨테이너의 역할을 한다.
+
+<method=get 방식>
+- url 주소 뒤에 파라미터를 붙여서 데이터를 전달하는 방식
+- 예) 주소 ? 파라미터 (http://news.naver.com/main/list.nhn?mode=LSD&mid=sec&sid1=001)
+- 최대 글자수 2048로 제한
+- 보안에 취약
+- 북마크 가능, 뒤로 가기 보장
