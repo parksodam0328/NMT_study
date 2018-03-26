@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>formTest.html</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        color:green;
+        margin-bottom: 10px;
+    }
+    body{
+        width:150px;
+        height: 200px;
+    }
+    input{
+        padding: 5px;
+        margin: 3px 3px 3px 3px;
+    }
+    #login{
+        box-shadow: 3px 2px 5px 2px black;
+        width: 300px;
+        background-color: white;
+        border: 1px solid gray;
+        margin: 10px 5px 0px 5px;
+        padding: 15px;
+    }
+    lable{
+        width: 120px;
+        font-weight: bold;
+        color:darkblue;
+        float: left;
+    }
+    section{
+        
+        margin-top: 10px;
+    }
+</style>
+<body>
+    
+   <form action="" method="post" >
+       <div id="login">
+       <section>
+                <h1>회원가입</h1>
+        <input type="text" size="30" placeholder="아이디" autofocus required>
+        <input type="text" size="30" placeholder="비밀번호" required>
+        <input type="text" size="30" placeholder="비밀번호 재확인" required> 
+    
+        </section>
+        <section id="section">
+            <input type="text" size="30" placeholder="이름" required><br>
+             <label>성별</label>
+                남자<input type="radio" id="male" required> 여자<input type="radio" id="female" required><br>
+            <input type="number" size="8" min="1900" max="2018" step="1" placeholder="생년" required>
+            <input type="number" size="4" min="1" max="12" step="1" placeholder="월" required>
+            <input type="number" size="4" min="1" max="31" step="1" placeholder="일" required>
+            <br>
+            <input type="email" size="30" placeholder="비상 연락용 이메일" required>
+        </section>
+        <section>
+            <input type="button" value="다시입력" id="re_input" onclick="reset()">
+            <input type="button" value="가입하기" id="signIn" onclick="check()">
+        </section>
+    </div> 
+   </form>
+</body>
+</html>

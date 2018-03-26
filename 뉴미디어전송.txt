@@ -228,3 +228,74 @@ euc-kr은 완성형 코드로 메모리를 적게 사용하는 한글과 영문�
 - 최대 글자수 2048로 제한
 - 보안에 취약
 - 북마크 가능, 뒤로 가기 보장
+
+method=post 방식
+- 데이터를 http request 헤더에 포함시켜 전송하는 방식
+- 캐시가 안되며 브라우저 히스토리에 남아있지 않다.
+- 북마크와 뒤로가기가 불가능하다.
+
+<input type="" value="" name="">
+- 사용자로부터 정보를 받아들이는 데 사용
+- type : 입력 요소의 유형
+- value : 입력 요소의 초기값
+- name : 입력 요소의 이름(서버와의 통신, id는 브라우저의 스크립트와 통신)
+
+type속성
+(text - 텍스트를 입력하는 한 줄짜리 필드, password - 비밀번호 입력하는 한 줄짜리 필드, radio - 라디오버튼, checkbox - 체크박스, file - 파일 이름을 입력하는 필드 생성, reset - 초기화 버튼, image - 이미지를 전송버튼으로 만든다,
+hidden - 사용자에게 보이지는 않으나 서버로 전송, submit - 제출 버튼 생성)
+
+input 요소의 추가 특성들
+- 기존에 있었던 폼요소로 한 줄 텍스트 입력에 사용
+- Required : 필수 입력 속성, Invalid : 입력값이 없을 경우 속성 등과 사용
+- Autofocus : 페이지 로딩이 끝남과 동시에 자동으로 해당폼으로 커서
+- Placeholder : 입력 필드에 간단한 설명을 표시
+list : 제시문자열을 담은 datalist 요소의 ID(목록 ID - 문자열)
+Min : 수치, 날짜 필드의 최소값(수치, 날짜)
+Max : 수치, 날짜 필드의 최대값(수치, 날짜)
+Step : 수치, 날짜 필드의 증감 단계 크기(수치)
+Multiple : 다중 선택 가능 여부(부울)
+Autocomplete : 저장된 자료를 자동으로 채워 넣을지 여부(열거형)
+pattern : 정규식 표현(문자열)
+
+<input type="button" value="">
+- 폼요소 안에 버튼을 삽입
+
+<button>
+- 폼요소 안에 버튼을 삽입, 텍스트나 이미지와 같은 콘텐츠를 넣을 수 있다.
+- 참고) form안에 <button>을 삽입할 경우 예상치 못한 이상한 값이 서버로 제출될 수 있다. 따라서 <form> 태그 안에서는 가급적 <input> 태그를 사용한다.
+
+이미지 버튼의 사용
+- 다음과 같은 두 가지 방법으로 이미지 버튼의 사용이 가능하다.
+<button type="submit" onclick="alert('HI')"<img src="image/button_01.png></button>
+<image type="image" img src="image/button_01.png onclick="alert('HI')" alt="제출버튼">
+
+추가 입력 태그
+Textarea(name, rows, cols) : 여러 줄의 텍스트 입력
+Select - option(value, selected) : 메뉴를 표시하고 사용자로 하여금 선택
+Fieldset(legend) : 입력요소를 그룹핑, 제목
+Lable(for) : 레이블을 설정
+
+파일 업로드
+- 파일을 여러 개 선택할 수 있음 - multiple 속성을 이용
+- 선택할 수 있는 파일의 종류를 지정할 수 있음 - accept 속성에 MIME 타입을 지정하여 필터링 할 수 있음
+- 예) 특수한 마임타임 : Image/*(모든 이미지), video/*(모든 동영상), audio/*(모든 사운드) => 아직 적용된 브라우저는 없음
+- 파일 이름 이외의 데이터 크기(크기, 갯수등)도 자바스크립트로 접근할 수 있음 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
