@@ -8,7 +8,6 @@
 </head>
 <style>
     h1{
-        text-align: center;
         color:green;
         margin-bottom: 10px;
     }
@@ -35,36 +34,50 @@
         float: left;
     }
     section{
-        
         margin-top: 10px;
     }
 </style>
 <body>
-    
    <form action="" method="post" >
+       <fieldset>
+           <legend><h1>회원가입</h1></legend>
        <div id="login">
        <section>
-                <h1>회원가입</h1>
-        <input type="text" size="30" placeholder="아이디" autofocus required>
+                
+        <input type="text" size="30" placeholder="아이디" pattern="[a-z][!@#$%^*()`~]{6}" autofocus required><!--소문자+특수문자 6자 이상, 소문자로 시작-->
         <input type="text" size="30" placeholder="비밀번호" required>
         <input type="text" size="30" placeholder="비밀번호 재확인" required> 
     
         </section>
         <section id="section">
-            <input type="text" size="30" placeholder="이름" required><br>
+            <input type="text" size="30" placeholder="이름" ><br>
              <label>성별</label>
-                남자<input type="radio" id="male" required> 여자<input type="radio" id="female" required><br>
-            <input type="number" size="8" min="1900" max="2018" step="1" placeholder="생년" required>
-            <input type="number" size="4" min="1" max="12" step="1" placeholder="월" required>
-            <input type="number" size="4" min="1" max="31" step="1" placeholder="일" required>
+                남자<input type="radio" id="male" required> 여자<input type="radio" id="female" ><br>
+            <input type="number" size="8" min="1900" max="2018" step="1" placeholder="생년" >
+            <input type="number" size="4" min="1" max="12" step="1" placeholder="월" >
+            <input type="number" size="4" min="1" max="31" step="1" placeholder="일" >
             <br>
-            <input type="email" size="30" placeholder="비상 연락용 이메일" required>
+            <input type="email" size="30" placeholder="비상 연락용 이메일" >
         </section>
         <section>
-            <input type="button" value="다시입력" id="re_input" onclick="reset()">
-            <input type="button" value="가입하기" id="signIn" onclick="check()">
+            <input type="reset" value="다시입력" id="re_input">
+            <input type="submit" value="가입하기" id="signIn">
         </section>
-    </div> 
-   </form>
+        <section>
+            <lable for="cmt">남기고 싶은 말</lable>
+            <textarea name="cmt" rows="5" cols="33">
+            </textarea>
+        </section>
+        <section>
+            <lable for="path">알게된 경로</lable>
+            <select name="path">
+                <option value="홈페이지">홈페이지</option>
+                <option value="직원추천">직원추천</option>
+                <option value="기타">기타</option>
+            </select>
+        </section>
+    </div>
+</fieldset>
+</form>
 </body>
 </html>

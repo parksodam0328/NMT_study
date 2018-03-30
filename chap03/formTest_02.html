@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>formTest.html</title>
+</head>
+<style>
+    h1{
+        color:green;
+        margin-bottom: 10px;
+    }
+    body{
+        width:150px;
+        height: 200px;
+    }
+    input{
+        padding: 2px;
+        margin: 3px 3px 3px 3px;
+    }
+    #login{
+        width: 350px;
+        background-color: white;
+        border: 1px solid gray;
+        margin: 10px 5px 0px 5px;
+        padding: 15px;
+    }
+    lable{
+        width: 120px;
+        font-weight: bold;
+        color:darkblue;
+        float: left;
+    }
+    section{
+        margin-top: 10px;
+    }
+</style>
+<body>
+   <form action="" method="post" >
+       <fieldset id="login">
+           <legend>추가 속성 테스트</legend>
+           <table>
+                <tr>
+                    <td><lable>date:</lable></td><td><input type="date"></td>
+                </tr>
+                <tr>
+                     <td><lable>datetime-local:</lable></td><td width="20px"><input type="datetime-local"></td>
+                 </tr>
+                 <tr>
+                     <td><lable>month:</lable></td><td><input type="month"></td>
+                 </tr>
+                 <tr>
+                     <td><lable>time:</lable></td><td><input type="time"></td>
+                 </tr>
+                 <tr>
+                     <td><lable>week:</lable></td><td><input type="week"></td>
+                 </tr>
+                 <tr>
+                     <td><lable>color:</lable></td><td><input type="color"></td>
+                 </tr>
+                 <tr>
+                     <td><lable>email:</lable></td><td><input type="email"></td>
+                 </tr>
+                 <tr>
+                     <td><lable>tel:</lable></td><td><input type="tel" placeholder="###-####-####" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"></td>
+                 </tr>
+                 <tr>
+                     <td><lable>search:</lable></td><td><input type="search"></td>
+                 </tr>
+                 <tr>
+                     <td><lable>range:</lable></td><td><input type="range"></td>
+                 </tr>
+                 <tr>
+                     <td><lable>number:</lable></td><td><input type="number"></td>
+                 </tr>
+                 <tr>
+                     <td><lable>url:</lable></td><td width="30px"><input type="url"></td>
+                 </tr>
+            </table> 
+</fieldset>
+</form>
+</body>
+</html>
