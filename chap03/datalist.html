@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: 500px;
+        }
+        legend{
+            color:black;
+            font-size: 1.2em;
+        }
+        input{
+            width: 150px;
+            margin: 5px 5px 5px 5px;
+        }
+        label{
+            width: 120px;
+            font-weight: bold;
+            float: left;
+            color: blue;
+            padding : 5px 5px 5px 5px;
+        }
+    </style>
+    <script>
+    function gotourl(){
+        var url = "http://"+document.getElementById("url").value;
+        open(url); // open 메소드는 정확한 주소가 필요하다. 그래서 앞에 http://를 붙임
+    }
+    </script>
+</head>
+<body>
+    <form name="myForm">
+        <fieldset>
+            <legend>이름</legend>
+            <label>Goto</label>https://<input type="text" id="url"
+            name="homepage" list="homepage" autofocus>
+            <datalist id="homepage">
+                <option value="www.google.com"></option>
+                <option value="www.facebook.com"></option>
+                <option value="www.naver.com"></option>
+            </datalist>
+            <input type="submit" value="이동" onclick="gotourl()">
+        </fieldset>
+        <fieldset>
+             <details open="open">
+                <summary>과일 사과 레포트</summary>
+                 사과는 장미 종 맬 러스 domestica, 사과 나무의 pomaceous 과일입니다.
+            </details>
+        </fieldset>
+        <fieldset>
+            <pre><code>
+                function Panel(element,canClose, closeHandler){
+                    this.element=element;
+                    this.canClose = canClose;
+                    this.closeHandler = function() { if (closeHandler) closeHandler()};
+                }
+            </code></pre>
+        </fieldset>
+        <fieldset>
+            <p>컴퓨터를 하던 중 <samp>the system encountered a problem (#707)</samp>라는 에러메세지가 떴다.</p>
+        </fieldset>
+    </form>
+</body>
+</html>
+</html>
