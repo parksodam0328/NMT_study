@@ -1,0 +1,41 @@
+header {
+    background-color: black;
+    width: 100%;
+    height: 20%;
+    opacity: 0.85;
+}
+
+#icon {
+    font-size: 2em;
+    color: white;
+    font-weight: 800;
+    vertical-align: middle;
+}
+#top {
+    font-size: 1.1em;
+    color: white;
+    font-weight: 400;
+    vertical-align: middle;
+}
+footer{
+    background-color: black;
+    width: 100%;
+    height: 30%;
+}
+#footer_content{
+    color: white;
+    text-align: center;
+}
+section{
+    margin: 10px 10px 10px 5px;
+}
+img{
+    padding: 5px 5px 5px 5px;
+}
+nav{
+    color: white;
+}
+#footer_nav{
+    font-weight: 800;
+    margin: 20px 10px 10px 20px;
+}

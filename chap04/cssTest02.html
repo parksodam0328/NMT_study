@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1,h2{font-style: italic;}/*선택자 그룹*/
+        body em{color: darkmagenta}/*하위 선택자*/
+        body > em{color: red}/*자식 결합*/
+        h4 > em{color: red}/*자식 결합*/
+        body > h4{color: red}/*자식 결합*/
+        a:link{color:black;}
+        a:hover{color:black;}
+        a:visited{color:black;}
+    </style>
+</head>
+<body>
+    <h1>해당 h1 태그 입니다.</h1>
+    <h2>해당 h2 태그 입니다.</h2>
+    <h3>해당 h3 태그 입니다.</h3>
+    <h4>This Headline is <em>very</em> important</h4>
+    <ul>
+        <li><a href="index.html">POPMUSIC</a></li>
+        <li><a href="billboard.html">Billboard</a></li>
+        <li><a href="genre">Genre</a></li>
+        <li><a href="video.html">Video</a></li>
+    </ul>
+    <div class="yellow_box">
+        <span>yellow_box 입니다.</span>
+    </div>
+    <div class="orange_box">
+        <span>orange_box 입니다.</span>
+    </div>
+    <div>
+        <span id="red_box">red_box 입니다.</span>
+    </div>
+</body>
+</html>
