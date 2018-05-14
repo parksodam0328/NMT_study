@@ -54,83 +54,86 @@ nav{
 }
 #ladygaga{
     position: absolute;
-    left: 10%;
-    top: 10px;
+    left: 65%;
+    top: 56%;
     z-index: 1;
 }
 #nikiminaj{
     position: absolute;
-    left: 17%;
-    top: 30%;
+    left: 20%;
+    top: 22%;
     z-index: 5;
 }
 #rihanna{
     position: absolute;
-    left: 20%;
+    left: 25%;
     top: 0%;
     z-index: 2;
 }
 #maroon5{
     position: absolute;
-    left: 10%;
-    top: 10px;
-    z-index: 1;
+    left: 21%;
+    top: 54%;
+    z-index: 7;
 }
 #michaeljackson{
     position: absolute;
-    left: 10%;
-    top: 10px;
-    z-index: 1;
+    left: 60%;
+    top: 28%;
+    z-index: 12;
 }
 #britneyspears{
     position: absolute;
-    left: 40%;
-    top: 40%;
+    left: 45%;
+    top: 30%;
     z-index: 6;
 }
 #adele1{
     position: absolute;
-    left: 10%;
-    top: 10px;
-    z-index: 1;
+    left: 33%;
+    top: 46%;
+    z-index: 8;
 }
 #adele2{
     position: absolute;
-    left: 10%;
-    top: 10px;
-    z-index: 1;
+    left: 50%;
+    top: 48%;
+    z-index: 9;
 }
 #amywinehouse{
     position: absolute;
-    left: 10%;
-    top: 10px;
-    z-index: 1;
+    left: 38%;
+    top: 68%;
+    z-index: 11;
 }
 #eminem{
     position: absolute;
     left: 35%;
-    top: 15%;
+    top: 12%;
     z-index: 1;
 }
 #justinbieber{
     position: absolute;
-    left: 70%;
+    left: 62%;
     top: 0%;
     z-index: 2;
 }
 #kendricklamar{
     position: absolute;
-    left: 60%;
-    top: 19%;
+    left: 50%;
+    top: 12%;
     z-index: 4;
 }
 #taylorswift{
     position: absolute;
-    left: 10%;
-    top: 10px;
-    z-index: 1;
+    left: 23%;
+    top: 38%;
+    z-index: 10;
 }
-
+img{
+    width: 210px;
+    height: 210px;
+}
 
 
 

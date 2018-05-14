@@ -129,6 +129,70 @@ text-decoration         장식 지정(overline, line-through, underline)
 text-indent             들여쓰기 지정
 text-shawdow            그림자 효과(x이동거리, y이동거리, 흐림, 그림자 색상)
 text-transform          대소문자 변화(uppercase, lowercase, capitalize)
+wor wrapping : 단어가 길 경우 자동으로 잘라 다음 줄로 넘기기(break-word)
+다중 컬럼 : 텍스트 배치시 다중 컬럼 생성
+    - column-count : 컬럼의 개수
+    - column-gap : 컬럼과 컬럼 사이의 간격
+    - column-rule : 컬럼과 컬럼 사이의 선 스타일(window size에 따라 안보이는 경우도 있음)
+
+박스 모델
+박스모델 : 요소(태그)를 박스 형태로 간주하고 스타일을 적용
+    - content : 박스의 내용물
+    - padding : content 주위의 영역, 투명
+    - border : 패딩과 내용물을 감싸는 경계
+    - margin : border 주위의 영역, 투명
+
+경계선
+    - border-style 스타일 : none, dotted, dashed, solid, double, groove, ridge, inset, outset 등(상->우->하->좌 순서)
+    - border-width : 두께 지정
+    - border-color : 색상 지정
+    - border : 5px solid red; (두께 스타일 색상 순으로 지정)
+    - border-radius : 둥근 경계 지정
+    - box-shawdow : 10px 10px 5px green; (가로옵셋, 세로옵셋, 번지는 정도, 그림자 색 지정)
+    - border-image : 경계선에 이미지를 지정 -> 익스플러로는 지원 안함
+        - 사파리 : - webkit - border-image
+        - 오페라 : - o - border-image
+
+마진과 패딩
+    - 요소크기설정 : 모든 요소의 크기를 width와 height 를 이용하여 설정
+    - 요소크기변경 : resize 속성(overflow 속성을 같이 사용)을 이용하여 크기 조정이 가능 both, horizontal, vertical, none 등이 있다.
+    - 마진 설정하기
+    auto    마진을 자동으로 계산
+    length  마진을 px, pt, cm로 설정
+    %       요소 폭의 퍼센트로 지정
+    inhreit 부모요소로부터 상속
+    음수    중첩효과
+    - margin : top -> right -> bottom -> left 순서로
+    - margin : 10px => 상하좌우 모두 10px씩
+
+    - 패딩 설정하기 : 콘텐츠와 경계 사이의 간격
+        - length : 마진을 px, pt, cm로 설정
+        - $ :      요소폭의 퍼센트로 지정
+    퀴즈) 다음 욧의 가로 사이즈는?
+    #target{
+        widthL 200px;
+        padding: 10;
+        border: 5 solid red;
+        margin: 20px;
+    }
+    답은 270
+    - 마진 속성을 이용한 수평 정렬 : 인라인 요소와 블럭 요소를 구분하여 설정
+        - 인라인 요소인 경우 : <text-align> 속성을 사용하기
+        - 블럭요소인 경우 : 마진을 사용
+
+배경 설정하기
+    - 배경색 설정 : background-color
+    - 배경이미지 설정 : background-image:url('파일이름');
+    - 배경이미지 반복 여부 : background-repeat :  repeat-x, repeat-y, no-repeat 등
+    - 배경이미지 부착방법 : 
+        - scroll : 배경이 요소와 같이 스크롤된다. 디폴트
+        - fixed : 배경이 뷰포트에 대해 고정된다.
+        - local : 요소의 콘텐츠와 같이 스크롤 된다.
+    - 배경이미지 위치 설정 : background-position, px 이나 퍼센트 단위로 설정
+    - 배경에 대한 속성을 한 줄로 설정 : 배경색, 배경이미지, 반복여부, 위치 순서로 설정
+    - 배경이미지 사이즈 : background-size로 지정, px이나 %로 지정하며 %인 경우 크기 설정의 기준은 부모 요소의 가로와 세로 크기이다.
+
+
 <span id="icon"><a href="index.html">POPMUSIC</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span id="top"><a href="billboard.html">Billboard</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span id="top"><a href="genre">Genre</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
