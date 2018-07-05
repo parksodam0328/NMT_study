@@ -286,6 +286,19 @@ float 속성의 활용
 z-index
     - 정상적인 흐름에서 벗어난 경우 겹침이 발생하는데, 요소의 스택 순서를 지정한다.
         - 숫자가 클수록 화면의 앞으로 나타난다.
+    
+요소의 크기 설정
+    - width, height : 요소의 크기
+    - min-height, min-width : 요소의 최소 크기
+    - max-height, max-width : 요소의 최대 크기
+
+overflow 속성
+    - 자식 요소가 부모 요소의 범위를 벗어났을 때 어떻게 처리할 것인지 지정
+        - hidden : 부모 영역을 벗어나는 부분을 보이지 않게 한다.
+        - scroll : 부모 영역을 벗어나는 부분을 스크롤 할 수 있도록 한다.
+        - auto : 자동으로 스크롤바가 나타난다.
+        - visible : 그대로 표시
+
 <span id="icon"><a href="index.html">POPMUSIC</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span id="top"><a href="billboard.html">Billboard</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span id="top"><a href="genre">Genre</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

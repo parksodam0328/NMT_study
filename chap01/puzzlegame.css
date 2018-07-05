@@ -1,0 +1,20 @@
+body{
+    background-color: #dddddd;
+}
+#puzzle{
+    background-color: white;
+    border: 1px solid #333333;
+    width: 400px;
+    height: 400px;
+}
+
+#puzzle .cell{
+    border:1px solid #cccccc;
+    width:100px;
+    height: 100px;
+    background: white;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 100px;
+}
