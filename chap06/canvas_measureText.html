@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1200" height="800" style="border:1px solid #000"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        var x=10;
+        var y=canvas.height/2;
+
+        ctx.beginPath();
+        ctx.moveTo(x,y);
+        ctx.lineTo(canvas.width-10,y);
+        ctx.stroke();
+
+        ctx.font="bold 20px Calibri";
+        ctx.textBaseline="middle";
+        ctx.fillText("middle",x,y); alert(x); alert(y);
+        x+=ctx.measureText("middle").width; alert(x); alert(y);
+
+        ctx.textBaseline="top";
+        ctx.fillText("top",x,y);
+        x+=ctx.measureText("top").width;
+
+        ctx.textBaseline="bottom";
+        ctx.fillText("bottom",x,y);
+        x+=ctx.measureText("bottom").width;
+
+        ctx.textBaseline="alphabetic";
+        ctx.fillText("alphabetic",x,y);
+        x+=ctx.measureText("alphabetic").width;
+
+        ctx.textBaseline="hanging";
+        ctx.fillText("hanging",x,y);
+        x+=ctx.measureText("hanging").width;
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width=1200 height=800 style="border: 1px solid #000000"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        var drawLine = function(){
+            var lineCap = ["butt","round","square"];
+            for(var i=0;i<5;i++){
+                ctx.beginPath();
+                ctx.moveTo(100,100*i);
+                ctx.lineWidth=5*i;
+                ctx.lineCap = lineCap[i-1];
+                ctx.lineTo(200,100*i);
+                ctx.stroke();
+            }
+        }
+        drawLine();
+    </script>
+</body>
+</html>

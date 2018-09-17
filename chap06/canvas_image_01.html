@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img1" src="adele.png">
+    <canvas id="myCanvas" width="1200" height="800" style="border:1px solid #000"></canvas>
+    <script>
+        var img = new Image(); // Image 요소 동적 생성
+        img.src="adele.png";
+        var canvas=document.getElementById("myCanvas"); // canvas가 하나 일때
+        // document.getElementById()
+        var ctx = canvas.getContext('2d');
+        
+        ctx.drawImage(img1, 10,10);
+        img.onload = function(){
+            ctx.drawImage(img,10,10);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:sans-serif;
+            font-size:100%; width:80%;
+            background-color: lightgray;
+            margin:auto;
+        }
+    </style>
+    <script>
+        var solution = 328;
+        function test(){ //선언적 함수
+            try{
+                var n = document.getElementById("number").value;
+                if(n=="") throw "입력오류";
+                if(isNaN(n)) throw "숫자아님";
+                if(n>solution) throw "너무 커";
+                if(n==solution) throw "정답";
+                if(n<solution) throw "너무 작아";
+            }catch(error){ //브라우저에서 제공 => 에러 이벤트
+                var result = document.getElementById("message");
+                result.innerHTML="힌트 : "+error;
+            }
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>Number Guess Game</h1>
+    <p>1부터 100사이의 숫자를 입력하세요</p>
+    <input type="text" id="number">
+    <button type="button" onclick="test()">숫자추측</button>
+    <p id="message"></p>
+</body>
+</html>

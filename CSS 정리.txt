@@ -299,8 +299,125 @@ overflow 속성
         - auto : 자동으로 스크롤바가 나타난다.
         - visible : 그대로 표시
 
-<span id="icon"><a href="index.html">POPMUSIC</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span id="top"><a href="billboard.html">Billboard</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span id="top"><a href="genre">Genre</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span id="top"><a href="video.html">Video</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span id="top"><a href="artist.html">Artist</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+대표적인 효과
+    opacity : 투명도 1.0 이면 불투명
+        - 마우스를 올리면 진해지고 내리면 흐려지는 이미지 작업
+
+전환효과
+    transition : 속성 시간
+        - 효과를 추가하고 싶은 css 속성을 지정한다.
+        - 효과의 지속 시간을 지정한다.
+        - 이때 시간을 지정하지 않으면 효과가 발생하지 않는다.
+        - 사파리의 경우 : -webkit-transition : 
+        - 예) 이미지에 마우스를 올리면 이미지의 크기가 커지는 효과를 제작하라
+
+다중전환
+        - 너비, 길이, 회전 등의 다양한 전환 효과
+
+CSS변환 (transformation)
+
+    - 요소의 크기, 형태, 위치를 변환(2,3차원 가능)
+        - transform : translate(100px, 100px) - x,y 축이동
+        - transform : rotate(90deg) - 90도 시계방향으로 회전
+        - transform : scale(2,1.5) - 가로 2배, 세로 1.5배 크기
+        - transform : skew(20deg, 10deg) - x방향 20도, y방향 10도 비틀기
+        - transform : perspective - 원근감을 나타내기
+        - transform-origin : 변형이 일어나는 기준점을 변경(원래 기준 0,0)
+
+Canvas 생성하기
+    canvas : 외부 플러그인 없이 웹페이지 위에 직접 그림을 그릴 수 있도록 해주는 요소
+    자바스크립트를 활요하면 정교한 그림을 그릴 수 있다.
+
+    <canvas id="myCanvas" width="" height="" style="border:1px dotted red></canvas>
+
+    주의 사항
+        - id, width, height를 설정해야한다.
+        - 한 페이지내에서 여러 개의 <canvas>를 삽입할 수 있다.
+        - 경계를 추가하기 위해 style 속성을 사용한다.
+        - <canvas> 에 그려지는 모든 것들은 자바스크립트내에서 작성한다.
+
+사각형 그리기
+    fillRect(x,y,w,h) :  속을 채운 사각형
+    strokeRect : 사각형 테두리만
+    clearRect(x,y,w,h) : 지정한 사각영역을 지움
+
+Canvas Element 색상
+    fillStyle : 도형의 내부 색상 결정하기 예) cvs.fillStyle
+    strokeStyle : 선 색상 결정하기
+    16진수 : #ff0000
+    rgb : rgb(255,0,0)
+    rgba : (255,0,0,1.0)
+    hsl : hsl(255,0,0)  h(색소), s(채도), l(명도)
+    hsla : hsla(255,0,0,1.0)
+
+선 그리기(path의 이해, 65p)
+    1. 새 경로 초기화 : beginPath();
+    2. 기하 도형의 형태 정의 : moveTo(); //시작점 이동, lineTo(); // 경로를 그리며 좌표이동
+    3. 도형을 실제로 그리거나 채우기 : stroke();, fill();
+    4. 58p 실습 예제 작성
+
+Canvas 선의 다양한 효과
+    1. 선의 굵기 : context.lineWidth = 20(픽셀)
+    2. 선끝의 모양 : context.lineCap = { *butt, round, square}
+    3. 선의 접합부 : context.lineJoin = [bevel, round, *miter]
+    *는 defalut
+    4. 58p 실습 예제 다음 코드 추가 확인
+    66p 실습예제 확인
+
+원 그리기(path의 이해,58p)
+    1. (x,y)가 중심이고 반지금이 radius인 원
+    2. 시작 각도와 마지막 각도를 연결하면 만나는 점이 2개 있다.
+    3. Anticlockwise가 0이면 시계방향, 1이면 반시계 방향이다.
+    4. 실선의 원호가 생긴다.
+    5. 새로운 현재점은 (epx, epy)가 된다.
+
+도(degree)를 라디언 각도를 도로 변환
+    - 90도 : 0.5*Math.PI
+    - 360도 : 2*Math.PI
+    - 58p 실습예제 작성 - arc 함수를 이용하여 원을 그리기
+
+Canvas 문자의 이해
+    - text 모양
+        - fillText 함수 (문자열, x,y)
+        - strokeText 함수 (문자열, x,y)
+    - text 음영
+        - shawdow 관련 함수 (문자열, x,y)
+    - text 배치
+        - textAlign 값 변경
+
+Canvas Text 관련 속성 및 메소드
+    1. textWidth:pixel
+    2. textHeight:pixel
+    3. measureText() : width를 측정, height는 측정 불가
+    4. textBaseline : top, middle, bottom 등
+    4. textAlign : left, right, center, start, end 등
+    5. fillText(문자열,x,y)
+    6. strokeText(문자열,x,y)
+    7. font : 'font-style, font-variant, font-weight, font-size, font-family'
+
+Canvas_그래디언트
+    - 컬러지정
+        - Red, #ff0000, rgb(255,0,0), rgba(255,0,0,1) 등
+    - 그라데이션 지정
+        - createLinearGradient(x0,y0,x1,y1);
+        - createRadialGradient(x0,y0,r0,x1,y1,r1);
+        - addColorStop(offset,color) : offset 위치에 그라데이션 경계색 지정
+
+Canvas_선형그래디언트 작업순서
+    1. Canvasgradient 객체 생성
+        -> ctx.createLinearGradient(x0,y0,x1,y1);
+    2. 객체 저장
+        -> var gra = ctx.createLinearGradient(x0,y0,x1,y1);
+    3. 색상 offset 추가하기
+        -> gra.addColorStop(offset,색상);
+    4. FillStyle 적용하기
+        -> ctx.fillStyle=gra;
+        -> ctx.gillRect( ) 등
+
+Canvas 원형그래디언트
+    - ctx.createRadialGradient(x0,y0,r0,x1,y1,r1);
+
+Canvas 이미지
+    drawImage(image,dx,dy) : 원하는 위치에 원래 크기로 그림을 삽입
+    drawImage(image,dx,dy,dw,dh) : 원하는 위치에 이미지의 사이즈를 지정해서 삽입
+    drawImage(image,sx,sy,sw,sh,dx,dy,dw,dh) : 원래 이미지로부터 일부분을 잘라내 삽입, 잘라내는 부분은 (sx,sy)를 왼쪽 위 정점으로 하여 넓이 sw, 높이 sh인 사각형 모양임

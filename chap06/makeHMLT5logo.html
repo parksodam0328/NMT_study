@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.moveTo(50,50);
+        context.lineTo(350,50);
+        context.lineTo(310,350);
+        context.lineTo(200,390);
+        context.lineTo(90,350);
+        context.lineTo(50,50);
+        context.closePath();
+        context.fillStyle="#ff0000";
+        context.fill();
+        
+        context.beginPath();
+        context.moveTo(70,70);
+        context.lineTo(200,70);
+        context.lineTo(200,365);
+        context.lineTo(105,330);
+        context.lineTo(70,70);
+        context.closePath();
+        context.fillStyle="#ff0000";
+        context.fill();
+        
+        context.beginPath();
+        context.moveTo(200,70);
+        context.lineTo(330,70);
+        context.lineTo(295,330);
+        context.lineTo(200,365);
+        context.lineTo(200,70);
+        context.closePath();
+        context.fillStyle="#ff00ff";
+        context.fill();
+
+        context.beginPath();
+        context.moveTo(100,120);
+        context.lineTo(200,120);
+        context.lineTo(200,150);
+        context.lineTo(130,150);
+        context.lineTo(133,180);
+        context.lineTo(200,180);
+        context.lineTo(200,210);
+        context.lineTo(110,210);
+        context.lineTo(100,120);
+        context.closePath();
+        context.fillStyle="#dcdcdc";
+        context.fill();
+
+        context.beginPath();
+        context.moveTo(200,120);
+        context.lineTo(295,120);
+        context.lineTo(291,150);
+        context.lineTo(200,150);
+        context.closePath();
+        context.fillStyle="#ffffff";
+        context.fill();
+        
+        context.beginPath();
+        context.moveTo(200,180);
+        context.lineTo(288,180);
+        context.lineTo(275,290);
+        context.lineTo(200,320);
+        context.lineTo(200,290);
+        context.lineTo(250,270);
+        context.lineTo(255,210);
+        context.lineTo(200,210);
+
+        context.closePath();
+        context.fillStyle="#ffffff";
+        context.fill();
+
+        context.beginPath();
+        context.moveTo(200,320);
+        context.lineTo(121,290);
+        context.lineTo(117,260);
+        context.lineTo(113,230);
+        context.lineTo(140,230);
+        context.lineTo(145,273);
+        context.lineTo(200,291);
+        
+        context.fillStyle="#dcdcdc";
+        context.fill();
+       
+    </script>
+</body>
+</html>

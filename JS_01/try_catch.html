@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var msg=""; //전역변수 선언
+        function test(){ //선언적 함수
+            try{
+                alert("Hello");
+            }catch(error){ //브라우저에서 제공 => 에러 이벤트
+                msg="다음과 같은 오류가 발생하였음 : "+error.message;
+                alert(msg);
+            }
+        }
+    
+    </script>
+</head>
+<body>
+    <input type ="button" value="try-catch" onclick="test()">
+</body>
+</html>
