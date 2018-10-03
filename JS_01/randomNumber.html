@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+    
+</head>
+<body>
+        <input type="button" value="1부터 10사이의 무작위 수" id="num1">
+        <input type="button" value="1부터 100사이의 무작위 수" id="num2">
+        <div id="result">result</div>
+        <script> 
+                var num = document.getElementById("num1");
+                num.onclick = function(){
+                    randomNum1();
+                }
+                num2.onclick = function(){
+                    randomNum2();
+                }
+                function randomNum1(){
+                    result = document.getElementById("result");
+                    result.innerHTML="<p>"+parseInt(Math.random()*10+1)+"</p>";
+                }
+        
+                function randomNum2(){
+                    result = document.getElementById("result");
+                    result.innerHTML="<p>"+parseInt(Math.random()*100+1)+"</p>";
+                }
+            </script>
+</body>
+
+</html>
